@@ -6,21 +6,21 @@ export class Work {
     this.current = new ForenoonState();
   }
   // “钟点”属性，状态转换的依据
-  #_hour;
+  #hour;
   get hour() {
-    return this.#_hour;
+    return this.#hour;
   }
   set hour(newVal) {
-    this.#_hour = newVal;
+    this.#hour = newVal;
   }
 
   // “任务完成”属性，是否能下班的依据
-  #_taskFinished = false;
+  #taskFinished = false;
   get taskFinished() {
-    return this.#_taskFinished;
+    return this.#taskFinished;
   }
   set taskFinished(newVal) {
-    this.#_taskFinished = newVal;
+    this.#taskFinished = newVal;
   }
 
   setState(s) {

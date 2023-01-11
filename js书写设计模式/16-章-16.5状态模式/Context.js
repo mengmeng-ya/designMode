@@ -1,21 +1,17 @@
-import { ConcreteStateA } from "./State.js";
-
 export class Context {
-  #_state;
+  #state;
   constructor(state) {
-    this.#_state = state;
+    this.#state = state;
   }
   get state() {
-    return this.#_state;
+    return this.#state;
   }
   set state(newVal) {
-    this.#_state = newVal;
-    // 不知道这里该怎么写
-    console.log("当期状态：" + this.#_state);
+    this.#state = newVal;
+    console.log("当期状态：" + this.#state.constructor.name);
   }
 
   request() {
-    // 这里也不知道怎么写
-    this.#_state.handle(this);
+    this.#state.handle(this);
   }
 }
